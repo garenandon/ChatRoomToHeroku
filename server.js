@@ -1,8 +1,11 @@
+const cors = require('cors');
 const express = require("express");
 const bodyParser = require("body-parser");
 
 const port = process.env.PORT || 8080;
 const app = express();
+app.use(cors());
+app.options('*', cors());
 const http = require("http").Server(app);
 //const db = require("./dbConfig");
 
