@@ -70,13 +70,13 @@
       });
 
       const getMessages = () => {
-        $.get("http://localhost:8080/messageEndpoint", (data) => {
+        $.get("https://chatwithgaren.herokuapp.com/messageEndpoint", (data) => {
           data.forEach(addMessage);
         });
       };
 
       const postMessage = (messageObject) =>
-        $.post("http://localhost:8080/messageEndpoint", messageObject);
+        $.post("https://chatwithgaren.herokuapp.com/messageEndpoint", messageObject);
 
       const addMessage = (inputMessage) =>
         $("#messages").append(
